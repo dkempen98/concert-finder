@@ -8,6 +8,7 @@ var url;
 var date;
 var time;
 var artistImg;
+var cityName;
 var city;
 var state;
 var stateCode;
@@ -15,7 +16,6 @@ var address;
 var longitude;
 var latitude;
 var genre;
-var city;
 
 var formSubmitHandler = function(event) {
     event.preventDefault();
@@ -39,7 +39,7 @@ var getEvents = function(genre, city) {
             var date = data.dates.start.localDate;
             var time = data.dates.start.localTime;
             var artistImg = data.attractions.images[0].url;
-            var city = data._embedded.venues.city.name;
+            var cityName = data._embedded.venues.city.name;
             var state = data._embedded.venues.state.name;
             var stateCode = data._embedded.venues.state.stateCode;
             var address = data._embedded.venues.address.line1;
