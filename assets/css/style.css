@@ -49,6 +49,16 @@ body {
     }
 }
 
+img {
+    height: 500px;
+}
+
+.logo {
+    text-align: center;  
+    filter: drop-shadow(2px 4px 8px #000);
+    
+}
+
 /* Footer Section  */
 footer{
     text-align: center;
