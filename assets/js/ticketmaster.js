@@ -15,7 +15,6 @@ var address;
 var longitude;
 var latitude;
 var genre;
-var city;
 
 var formSubmitHandler = function(event) {
     event.preventDefault();
