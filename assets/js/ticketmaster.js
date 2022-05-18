@@ -14,6 +14,7 @@ var stateCode;
 var address;
 var longitude;
 var latitude;
+
 var genre;
 
 var formSubmitHandler = function(event) {
