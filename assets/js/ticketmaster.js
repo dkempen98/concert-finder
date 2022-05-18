@@ -43,8 +43,8 @@ var getEvents = function (genre, city) {
       return response.json();
     })
     .then(function (data) {
-      for (var i = 0; i < 12; i++) {
         console.log(data);
+      for (var i = 0; i < 12; i++) {
         bandName.push(data._embedded.events[i].name);
         url.push(data._embedded.events[i].url);
         date.push(data._embedded.events[i].dates.start.localDate);
@@ -71,11 +71,12 @@ var getEvents = function (genre, city) {
 };
 
 var displayEvents = function () {
-  for (var i = 0; i < 12; i++) {
-    var eventEl = document.getElementById("cont-" + (i + 1));
-    eventEl.appendChild();
+//   for (var i = 0; i < 12; i++) {
+//     var eventEl = document.getElementById("cont-" + (i + 1));
+    // eventEl.appendChild();
     console.log(bandName + url + date + time + artistImg + venue);
+    console.log(url)
   }
-};
+// };
 
 getEvents();
