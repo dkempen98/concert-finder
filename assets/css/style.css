@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+
 /* Universal Selector */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Html & Section */
@@ -59,6 +62,136 @@ img {
     
 }
 
+
+/* Search section */
+.search1{
+  text-align: center;
+  /* margin: 30px; */
+  padding: 30px;
+}
+
+.search2{
+  text-align: center;
+  padding: 30px;
+}
+.search3{
+  text-align: center;
+  padding: 30px;
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+  box-shadow:
+  2.7px 1.9px 2.3px rgba(0, 0, 0, 0.25),
+  5.9px 4.3px 5px rgba(0, 0, 0, 0.197),
+  9.8px 7.2px 8.3px rgba(0, 0, 0, 0.172),
+  14.9px 10.9px 12.6px rgba(0, 0, 0, 0.154),
+  21.4px 15.7px 18.2px rgba(0, 0, 0, 0.139),
+  30.3px 22.2px 25.7px rgba(0, 0, 0, 0.125),
+  43px 31.4px 36.4px rgba(0, 0, 0, 0.111),
+  62.4px 45.6px 52.9px rgba(0, 0, 0, 0.096),
+  96.2px 70.3px 81.6px rgba(0, 0, 0, 0.078),
+  171px 125px 145px rgba(0, 0, 0, 0.053)
+;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color: grey;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+.select {
+  display: inline-block;
+  width: 215px;
+  padding: 10px 0 10px 15px;
+  font-family: "Open Sans", sans;
+  font-weight: 400;
+  color: black;
+  background: #efefef;
+  border: 0;
+  border-radius: 0% 100% 100% 0% / 0% 49% 51% 100% ;
+  outline: 0;
+  text-indent: 60px;
+  transition: all .3s ease-in-out;
+  box-shadow:
+  2.7px 1.9px 2.3px rgba(0, 0, 0, 0.25),
+  5.9px 4.3px 5px rgba(0, 0, 0, 0.197),
+  9.8px 7.2px 8.3px rgba(0, 0, 0, 0.172),
+  14.9px 10.9px 12.6px rgba(0, 0, 0, 0.154),
+  21.4px 15.7px 18.2px rgba(0, 0, 0, 0.139),
+  30.3px 22.2px 25.7px rgba(0, 0, 0, 0.125),
+  43px 31.4px 36.4px rgba(0, 0, 0, 0.111),
+  62.4px 45.6px 52.9px rgba(0, 0, 0, 0.096),
+  96.2px 70.3px 81.6px rgba(0, 0, 0, 0.078),
+  171px 125px 145px rgba(0, 0, 0, 0.053)
+;
+
+}
+
+.select:focus,
+.select:active {
+  color: black;
+  text-indent: 0;
+  background: #fff;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.swing {
+  display: inline-block;
+  width: 215px;
+  padding: 10px 0 10px 15px;
+  font-family: "Open Sans", sans;
+  font-weight: 400;
+  color: black;
+  background: #efefef;
+  border: 0;
+  border-radius: 100% 0% 0% 100% / 50% 100% 0% 50%    ;
+  outline: 0;
+  text-indent: 60px;
+  transition: all .3s ease-in-out;
+  box-shadow:
+  2.7px 1.9px 2.3px rgba(0, 0, 0, 0.25),
+  5.9px 4.3px 5px rgba(0, 0, 0, 0.197),
+  9.8px 7.2px 8.3px rgba(0, 0, 0, 0.172),
+  14.9px 10.9px 12.6px rgba(0, 0, 0, 0.154),
+  21.4px 15.7px 18.2px rgba(0, 0, 0, 0.139),
+  30.3px 22.2px 25.7px rgba(0, 0, 0, 0.125),
+  43px 31.4px 36.4px rgba(0, 0, 0, 0.111),
+  62.4px 45.6px 52.9px rgba(0, 0, 0, 0.096),
+  96.2px 70.3px 81.6px rgba(0, 0, 0, 0.078),
+  171px 125px 145px rgba(0, 0, 0, 0.053)
+;
+
+}
+
+.swing:focus,
+.swing:active {
+  color: black;
+  text-indent: 0;
+  background: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
 /* Covid btn  */
 
 .covidApi-test{
@@ -109,6 +242,7 @@ img {
     border-radius: 15px;
     margin: 30px;
     transition: 0.5s;
+    
 }
   
 .container .card:nth-child(1) .box .content a {
@@ -203,7 +337,7 @@ img {
 footer{
     text-align: center;
     font-size: 15px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 2.5rem;
