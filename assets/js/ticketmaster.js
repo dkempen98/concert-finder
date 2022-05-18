@@ -54,3 +54,11 @@ var getEvents = function(genre, city) {
             var latitude = data._embedded.events[i]._embedded.venues[0].location.latitude;
             }});
 };
+
+var displayEvents = function () {
+    for (var i = 0; i < 12; i++) {
+    var eventEl = document.getElementById('cont-' + (i + 1));
+    eventEl.appendChild()
+    
+    };
+};
