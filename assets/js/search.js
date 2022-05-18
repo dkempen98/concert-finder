@@ -2,7 +2,7 @@
 // ***************** Covid Tracker API *********************** 
 let covidUrl = `https://data.cdc.gov/resource/9mfq-cb36.json`;
 
-covidtestBtn = document.querySelector(".covidApi-test")
+covidtestBtn = document.querySelector(".covidApi-test");
 
 function getCovidApi() {
   fetch(covidUrl).then(function (response) {
@@ -12,15 +12,15 @@ function getCovidApi() {
   .then(function (data) {
     console.log(data);
   })
-}
+};
 
 covidtestBtn.addEventListener("click", getCovidApi);
 
 /////////////////////////////////////////////////////////////////
 
 // ***************** Ticket Master API *********************** 
-var genreInputEl = document.querySelector("")
-var cityInputEl = document.querySelector("")
+var genreInputEl = document.querySelector("");
+var cityInputEl = document.querySelector("");
 
 var apiKey = E1gg09qaCvdAbByNv5x40wHdUzV09DOu;
 
@@ -42,7 +42,7 @@ var formSubmitHandler = function(event) {
     var genre = genreInputEl.value.trim();
     var city = locationInputEl.value.trim();
     if (genre, city) {
-        getEvents(genre, city)
+        getEvents(genre, city);
         genreInputEl.value = '';
         cityInputEl.value = '';
     }
