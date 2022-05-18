@@ -1,6 +1,6 @@
 // Structure For Search Engine Functions. 
-const test1 = false
-const test2 = false
+const test1 = true
+const test2 = true
 function searchEnginePromise() {
     return new Promise((resolve, reject) => {
         if (test1) {
@@ -14,12 +14,11 @@ function searchEnginePromise() {
         }else {
             resolve('test success')
         }
- })
-}
+})}
 searchEnginePromise().then((message) => {
     console.log('Var should be -> ' +message)
 }).catch((error) => {
-    console.log(error.name + ''+error.message)
+    console.log(error.message)
 })
 // Structure for condensing all API's to an array.
 const covidApi = new Promise((resolve, reject) => {
