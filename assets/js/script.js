@@ -22,7 +22,7 @@ function weatherAvailable() {
     console.log("n/a");
     return;
   } else {
-    // call weather function
+    // getWeather()
     console.log(daysUntilConcert);
   }
 }
