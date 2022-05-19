@@ -43,7 +43,7 @@ var getEvents = function (genre, city) {
       return response.json();
     })
     .then(function (data) {
-        console.log(data);
+      console.log(data);
       for (var i = 0; i < 3; i++) {
         bandName.push(data._embedded.events[i].name);
         url.push(data._embedded.events[i].url);
@@ -72,16 +72,19 @@ var getEvents = function (genre, city) {
 
 var displayEvents = function () {
   for (var i = 0; i < 3; i++) {
+    var artistEl = document.getElementById("artist-" + (i + 1));
+    var dateEl = document.getElementById("date-" + (i + 1));
+    var timeEl = document.getElementById("time-" + (i + 1));
+    var stadiumEl = document.getElementById("stadium-" + (i + 1));
+    var weatherEl = document.getElementById("weather-" + (i + 1));
+    var linkEl = document.getElementById("link-" + (i + 1));
 
-    var eventEl = document.getElementById("card-" + (i + 1));
-
-    var eventInfo = document.createElement("p")
-    
-    eventInfo.innerHTML = (bandName[i] + "\n" + url[i] + "\n" + date[i] + "\n" + time[i] + "\n" + artistImg[i] + "\n" + venue[i])
-
-    eventEl.appendChild(eventInfo);
-      
-    console.log(bandName[i] + "\n" + url[i] + "\n" + date[i] + "\n" + time[i] + "\n" + artistImg[i] + "\n" + venue[i]);
+    artistEl.textContent = bandName[i];
+    dateEl.textContent = date[i];
+    timeEl.textContent = time[i];
+    stadiumEl.textContent = venue[i];
+    // initiate weather function domino effect to pull weather info if available
+    linkEl.setAttribute("href", url[i]);
   }
 };
 
