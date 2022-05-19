@@ -73,9 +73,13 @@ var getEvents = function (genre, city) {
 var displayEvents = function () {
   for (var i = 0; i < 12; i++) {
     var eventEl = document.getElementById("cont-" + (i + 1));
-    eventEl.appendChild();
-    console.log(bandName + url + date + time + artistImg + venue);
-    console.log(url)
+
+    
+
+    // eventEl.appendChild(bandName + "\n" + url + "\n" + date + "\n" + time + "\n" + artistImg + "\n" + venue);
+    
+    
+    console.log(bandName[i] + "\n" + url[i] + "\n" + date[i] + "\n" + time[i] + "\n" + artistImg[i] + "\n" + venue[i]);
   }
 };
 
