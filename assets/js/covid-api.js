@@ -12,7 +12,6 @@ let mostRecentDate = [];
 function getStateIn() {
   stateIn = `${covidtestIn.value}`;
   covidUrl = `https://data.cdc.gov/resource/9mfq-cb36.json?state=${stateIn}`;
-  console.log(stateIn);
   getCovidApi();
 }
 
@@ -25,6 +24,7 @@ async function getCovidApi() {
     .then(function (data) {
       covidData = data;
     });
+    console.log(covidData)
   splitDate();
 }
 
@@ -32,27 +32,40 @@ function splitDate() {
   for (let i = 0; i < covidData.length; i++) {
     subDate = covidData[i].submission_date;
     let dateArray = subDate.split("-");
-    let dayArray = dateArray[2].split("T");
+    let dayArray = dateArray[2].split("T00:00:00.000");
     year = dateArray[0];
     month = dateArray[1];
     day = dayArray[0];
 
+    // console.log(year);
+    // console.log(month);
+    // console.log(day);
     findMostRecentDate();
   }
-  console.log(mostRecentDate);
   mostUpadatedData = `${mostRecentDate[0].year}-${mostRecentDate[0].month}-${mostRecentDate[0].day}T00:00:00.000`;
-  console.log(mostUpadatedData);
+  UpdateCovidData(mostUpadatedData);
 }
 
+async function UpdateCovidData() {
+  covidUrl = `https://data.cdc.gov/resource/9mfq-cb36.json?state=${stateIn}&submission_date=${mostUpadatedData}`;
+  console.log(covidUrl)
+  await fetch(covidUrl)
+    .then(function (response) {
+      let json = response.json();
+      return json;
+    })
+    .then(function (data) {
+      covidData = data;
+    });
+  console.log(covidData);
+}
+
+// Logic needs correction!
 function findMostRecentDate() {
-  if (year > prevYear) {
+  if (year > prevYear && month > prevMonth && day > prevDay) {
     prevYear = year;
-    if (month > prevMonth) {
-      prevMonth = month;
-      if (day > prevDay) {
-        prevDay = day;
-      }
-    }
+    prevMonth = month;
+    prevDay = day;
     let mostRecent = {
       year: prevYear,
       month: prevMonth,
@@ -62,8 +75,7 @@ function findMostRecentDate() {
     let obj = {};
     obj["year"] = mostRecent.year;
     obj["month"] = mostRecent.month;
-    obj["day"] = mostRecent.day;
-
+    obj["day"] = mostRecent.day;    
     mostRecentDate[0] = obj;
   }
 }
