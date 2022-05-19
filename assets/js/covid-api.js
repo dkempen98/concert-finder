@@ -1,9 +1,10 @@
 let stateIn = "";
 let covidUrl;
-let covidData, subDate, year, month, day, stateVer, prevState;
+let covidData, subDate, year, month, day;
 let prevYear = 0;
 let prevMonth = 0;
 let prevDay = 0;
+let mostUpadatedData;
 covidtestBtn = document.querySelector(".covidApi-test");
 covidtestIn = document.querySelector("#test-input-covid");
 let mostRecentDate = [];
@@ -39,6 +40,8 @@ function splitDate() {
     findMostRecentDate();
   }
   console.log(mostRecentDate);
+  mostUpadatedData = `${mostRecentDate[0].year}-${mostRecentDate[0].month}-${mostRecentDate[0].day}T00:00:00.000`;
+  console.log(mostUpadatedData);
 }
 
 function findMostRecentDate() {
@@ -57,11 +60,11 @@ function findMostRecentDate() {
     };
 
     let obj = {};
-    obj["01"] = mostRecent.year;
-    obj["02"] = mostRecent.month;
-    obj["03"] = mostRecent.day;
+    obj["year"] = mostRecent.year;
+    obj["month"] = mostRecent.month;
+    obj["day"] = mostRecent.day;
 
-    mostRecentDate.push(obj);
+    mostRecentDate[0] = obj;
   }
 }
 
