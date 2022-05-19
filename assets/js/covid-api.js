@@ -1,7 +1,15 @@
-let covidUrl = `https://data.cdc.gov/resource/9mfq-cb36.json`;
+let stateIn = '';
+let covidUrl = `https://data.cdc.gov/resource/9mfq-cb36.json?state=${stateIn}`;
 let covidData, subDate, year, month, day, stateVer, prevState;
-covidtestBtn = document.querySelector(".covidApi-test")
+covidtestBtn = document.querySelector(".covidApi-test");
+covidtestIn = document.querySelector("#test-input-covid");
 let mostRecentData = [];
+
+function getStateIn() {
+  stateIn = `${covidtestIn.value}`;
+  console.log(stateIn);
+  // getCovidApi();
+}
 
 async function getCovidApi() {
   await fetch(covidUrl).then(function (response) {
@@ -14,9 +22,7 @@ async function getCovidApi() {
   splitDate();
 }
 
-function splitDate() {
-  prevState = covidData[0].state;
-  
+function splitDate() {  
   for (let i = 0; i < covidData.length; i++) {
     stateVer = covidData[i].state;
     subDate = covidData[i].submission_date;
@@ -27,7 +33,7 @@ function splitDate() {
     month = dateArray[1];
     day = dayArray[0];
     
-    createNewObj();
+    // createNewObj();
 
   }
   console.log(mostRecentData)
@@ -68,4 +74,4 @@ function createNewObj() {
 }
 
 
-covidtestBtn.addEventListener("click", getCovidApi);
+covidtestBtn.addEventListener("click", getStateIn);
