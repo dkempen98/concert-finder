@@ -61,6 +61,7 @@ async function UpdateCovidData() {
 }
 
 // Logic needs correction!
+//I'll do it later at night -Salvador
 function findMostRecentDate() {
   if (year > prevYear && month > prevMonth && day > prevDay) {
     prevYear = year;
