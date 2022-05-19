@@ -150,8 +150,8 @@ var getWeather = function(weather) {
   });
 };
 // Structure For Search Engine Functions. 
-const test1 = false
-const test2 = true
+let test1 = false
+let test2 = false
 function searchEnginePromise() {
     return new Promise((resolve, reject) => {
         if (test1) {
@@ -172,11 +172,11 @@ searchEnginePromise().then((message) => {
     console.log(error.message + '')
 })
 // Structure for condensing all API's to an array.
-const covidApi = new Promise((resolve, reject) => {
+let covidApi = new Promise((resolve, reject) => {
     resolve('Covid Api Success')})
-const weatherApi = new Promise((resolve, reject) => {
+let weatherApi = new Promise((resolve, reject) => {
     resolve('Weather Api Success')})
-const ticketApi = new Promise((resolve, reject) => {
+let ticketApi = new Promise((resolve, reject) => {
     resolve('Ticket Api Success')})
 Promise.all([
     covidApi,
@@ -185,3 +185,7 @@ Promise.all([
 ]).then((message) => {
     console.log(message)
 })
+
+var = cityComp
+var = weatherComp
+var = ticketComp

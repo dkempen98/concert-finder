@@ -46,7 +46,7 @@ var formSubmitHandler = function(weather) {
                     var country = data.country;
                                        
                 });
-
+            }
 var name;
 var local_names;
 var lat;
@@ -92,6 +92,6 @@ var formSubmitHandler = function(weather) {
                     var lon = data.lon;
                     var state = data.state;
                     var country = data.country;
-                                       
                 });
-        };
+            }
+        
