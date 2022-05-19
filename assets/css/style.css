@@ -57,24 +57,28 @@ img {
 }
 
 .logo {
-    text-align: center;  
+    position: absolute;  
     filter: drop-shadow(2px 4px 8px #000);
-    
+    transform: rotate(90deg);
+    padding-bottom: 0%;
+    padding-right: 18%;
 }
 
 
 /* Search section */
 .search1{
+  position: static;
   text-align: center;
   /* margin: 30px; */
   padding: 30px;
+  justify-content: space-around;
+  
 }
 
-.search2{
-  text-align: center;
-  padding: 30px;
-}
-.search3{
+/* Removed class search 2, condensed into search 1 for both city/genre searches. */
+
+.search3{ 
+  position: static;
   text-align: center;
   padding: 30px;
 }
@@ -335,7 +339,7 @@ img {
 
 /* Footer Section  */
 footer{
-    text-align: center;
+    text-align: right;
     font-size: 15px;
     position: fixed;
     bottom: 0;
