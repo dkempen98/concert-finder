@@ -19,10 +19,10 @@ body{
 }
 
 
-/* Background Section */
+/* Background Section****** Changed background color to something a bit easier on the eyes. -kyle */
 .bg {
     animation:slide 180s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+    background-image: linear-gradient(-60deg, rgb(0, 0, 0) 50%, rgb(131, 132, 133) 50%); 
     bottom:0;
     left:-50%;
     opacity:.45;
