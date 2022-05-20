@@ -4,8 +4,7 @@
 
 Technologies used: HTML, CSS, JavaScript. The APIs that were used alongside JavaScript to display data included the CDC Covid Data API, OpenWeather API, and Ticketmaster API.
 
-Screenshot:![image](https://user-images.githubusercontent.com/103770530/169554762-5b47dfc6-5e9a-4df0-8cd6-dbdbf005d72f.png)
-
+Screenshot: ![image](https://user-images.githubusercontent.com/103770530/169561998-74dc5b78-8277-46a5-bcc1-3669d04a2b15.png)
 
 Link: https://dkempen98.github.io/concert-finder/
 
