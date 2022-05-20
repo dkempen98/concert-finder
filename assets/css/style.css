@@ -17,7 +17,13 @@ html {
 body{
     margin:0;
 }
-
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100%;
+}
 
 /* Background Section****** Changed background color to something a bit easier on the eyes. -kyle */
 .bg {

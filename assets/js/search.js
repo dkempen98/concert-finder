@@ -127,7 +127,7 @@ function findMostRecentDate() {
       mostRecentDate[0] = obj;
   }
 }
-covidtestBtn.addEventListener("click", getStateIn);
+// covidtestBtn.addEventListener("click", getStateIn); <--- Can uncomment to run the covid API future function. 
 // ***************** Ticket Master API ***********************
 var genreInputEl = document.querySelector("#genreSelect")
 var cityInputEl = document.querySelector("#city")
